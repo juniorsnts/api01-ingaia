@@ -7,8 +7,10 @@ Welcome to the API 1.
 - Node.js 
 - Express.js
 - Typescript
-
 ## Instruções para executar o projeto
+
+## Documentação swagger no heroku
+https://api1-ingai-a.herokuapp.com/api-docs
 
 ### Crie .env baseado no .env-example
 O .env-example tem as urls apontadas para o heroku
@@ -54,3 +56,4 @@ package.json // arquivo de configurações e dependencias
 README.MD    // readme.md
 tsconfig.json // arquivo de configuração do ts
 ```
+
