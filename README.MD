@@ -1,0 +1,56 @@
+# INGAIA - API 1
+
+Welcome to the API 1.
+### Esta api retorna o valor fixo do metro quadrado
+
+### Tecnologias usadas:
+- Node.js 
+- Express.js
+- Typescript
+
+## Instruções para executar o projeto
+
+### Crie .env baseado no .env-example
+O .env-example tem as urls apontadas para o heroku
+```
+cp .env-example .env
+```
+
+### Usando docker (opção 1)
+A imagem do docker gera um container com o pm2 para executar o projeto
+```
+docker build -t ingaia-api-01 .
+docker run -p 3001:3000 ingaia-api-01
+```
+
+### Executando localmente (opção 2)
+```
+npm install
+npm run start
+```
+ou se preferir o yarn
+```
+yarn install
+yarn start
+```
+
+### Estrutura do projeto
+```
+.github
+    └── workflows
+            └── main.yml // configuração do github actions 
+                            com heroku 
+node_modules // dependencias
+src
+  └── controllers // contém toda a logica
+  └── middlewares // contém middleware de requisições
+  └── routes      // contém todas as rotas da aplicação
+  └── fake.json   // simula um banco de dados
+  └── index.ts    // arquivo principal de carregamento
+.env-example // arquivo .env de exemplo
+Dockerfile   // arquivo de imagem do docker
+nodemon.json // arquivo de configuração do nodemon
+package.json // arquivo de configurações e dependencias
+README.MD    // readme.md
+tsconfig.json // arquivo de configuração do ts
+```
